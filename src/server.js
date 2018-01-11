@@ -1,5 +1,5 @@
 // Récupération des librairies de base permettant de faire un serveur d'API
-import express from "express";
+const express = require("express");
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import path from "path";
