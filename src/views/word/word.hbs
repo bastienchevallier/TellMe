@@ -1,0 +1,21 @@
+<h1>Word</h1>
+
+<div>
+  <div>name : {{word.name}}</div>
+  <div>categorie : {{word.id_cat}}</div>
+  <div>grammatical nature : {{word.id_gram}}</div>
+  <div>
+   image : <img src="{{word.image}}" />
+</div>
+
+<div class="text-center">
+  <a class="btn btn-primary" href="/words/create" role="button">
+    Add a word
+  </a>
+  <a class="btn btn-secondary" href="/words/update/{{word.id}}" role="button">
+    Update
+  </a>
+  <a class="btn btn-danger" href="/words/delete/{{word.id}}" role="button">
+    Delete
+  </a>
+</div>

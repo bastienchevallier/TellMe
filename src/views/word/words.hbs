@@ -1,0 +1,45 @@
+<h1>Words</h1>
+
+<table class="table">
+ <thead>
+   <th>Name</th>
+   <th>Image</th>
+   <th>Categorie</th>
+   <th>Grammatical Nature</th>
+ </thead>
+
+  {{#list words}}
+
+  <tr>
+    <td>
+      <a class="btn btn-secondary btn-sm" href="/words/id/{{id}}" role="button">
+        {{name}}
+      </a>
+    </td>
+    <td>
+      <img src="{{image}}" />
+    </td>
+    <td>
+      {{id_cat}}
+    </td>
+    <td>
+      {{id_gram}}
+    </td>
+    <td>
+      <a class="btn btn-outline-secondary btn-sm" href="/words/update/{{id}}" role="button">
+        Update
+      </a>
+      <a class="btn btn-outline-danger btn-sm" href="/words/delete/{{id}}" role="button">
+        Delete
+      </a>
+    </td>
+  </tr>
+
+  {{/list}}
+</table>
+
+<div class="text-center">
+  <a class="btn btn-primary" href="/words/create" role="button">
+    Add a word
+  </a>
+</div>

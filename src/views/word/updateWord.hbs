@@ -1,0 +1,38 @@
+<h1>Update word</h1>
+
+<form action="/words/update/{{word.id}}" method="post">
+  <div class="form-group">
+    <label for="name">Name*</label>
+    <input value="{{word.name}}" class="form-control" type="text" id="name" name="name" placeholder="Word's name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="image">Image</label>
+    <input value="{{word.image}}" class="form-control" type="url" id="image" name="image" placeholder="URL of image that describes the most the word">
+  </div>
+
+  <div class="form-group">
+    <label for="id_cat">Categorie*</label>
+    <select class="form-control" id="id_cat" name="id_cat" required>
+      {{#list categories}}
+      <option value="{{id}}" {{selected ../word.id_cat id}}>{{name}}</option>
+      {{/list}}
+    </select>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="id_gram">Grammatical nature*</label>
+    <select class="form-control" id="id_gram" name="id_gram" required>
+      {{#list grammars}}
+      <option value="{{id}}" {{selected ../word.id_gram id}}>{{name}}</option>
+      {{/list}}
+    </select>
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary">
+      Update
+    </button>
+  </div>
+</form>

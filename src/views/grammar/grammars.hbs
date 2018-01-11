@@ -1,0 +1,33 @@
+<h1>Words</h1>
+
+<table class="table">
+ <thead>
+   <th>Name</th>
+ </thead>
+
+  {{#list grammars}}
+
+  <tr>
+    <td>
+      <a class="btn btn-secondary btn-sm" href="/grammars/id/{{id}}" role="button">
+        {{name}}
+      </a>
+    </td>
+    <td>
+      <a class="btn btn-outline-secondary btn-sm" href="/grammars/update/{{id}}" role="button">
+        Update
+      </a>
+      <a class="btn btn-outline-danger btn-sm" href="/grammars/delete/{{id}}" role="button">
+        Delete
+      </a>
+    </td>
+  </tr>
+
+  {{/list}}
+</table>
+
+<div class="text-center">
+  <a class="btn btn-primary" href="/grammars/create" role="button">
+    Add a grammatical nature
+  </a>
+</div>

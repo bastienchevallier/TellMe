@@ -1,0 +1,38 @@
+<h1>Create word</h1>
+
+<form action="/words/create" method="post">
+  <div class="form-group">
+    <label for="name">Name*</label>
+    <input class="form-control" type="text" id="name" name="name" placeholder="Word's name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="image">Image</label>
+    <input class="form-control" type="url" id="image" name="image" placeholder="URL of image that describes the most the word">
+  </div>
+
+  <div class="form-group">
+    <label for="id_cat">Categorie*</label>
+    <select class="form-control" id="id_cat" name="id_cat" required>
+      {{#list categories}}
+      <option value= {{id}} > {{name}} </option>
+      {{/list}}
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="id_gram">Grammatical nature*</label>
+    <select class="form-control" id="id_gram" name="id_gram" required>
+      {{#list grammars}}
+      <option value= {{id}} > {{name}} </option>
+      {{/list}}
+    </select>
+  </div>
+
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary">
+      Create
+    </button>
+  </div>
+</form>

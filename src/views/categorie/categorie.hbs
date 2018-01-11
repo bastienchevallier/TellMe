@@ -1,0 +1,20 @@
+<h1>Categorie</h1>
+
+<div>
+  <div>name : {{categorie.name}}</div>
+  <div>
+    image : <img src="{{categorie.image}}" />
+  </div>
+</div>
+
+<div class="text-center">
+  <a class="btn btn-primary" href="/categories/create" role="button">
+    Add a categorie
+  </a>
+  <a class="btn btn-secondary" href="/categories/update/{{categorie.id}}" role="button">
+    Update
+  </a>
+  <a class="btn btn-danger" href="/categories/delete/{{categorie.id}}" role="button">
+    Delete
+  </a>
+</div>
